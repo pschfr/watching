@@ -4,9 +4,6 @@
 require 'bundler'
 Bundler.require
 
-# Sets default layout to layout.haml
-set :haml, :layout => :layout
-
 # On '/' page, do this...
 get '/' do
   haml :index
