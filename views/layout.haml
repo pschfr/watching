@@ -1,13 +1,10 @@
 !!!
-%head
-  %title= settings.title
-  %meta{:author => settings.author}
-  %meta{:charset => "utf-8"}
-%body
-  %header
-    %h1= settings.title
-  %main{:role => "main"}
+%html{html_attrs('en-us')}
+  %head
+    %title= settings.title
+    %meta{:author => settings.author}
+    %meta{:charset => "utf-8"}
+  %body
+    = haml :_header
     = yield
-  %footer
-    %p
-      %a{:href => settings.github, :target => "_blank"} View Source on GitHub.
+    = haml :_footer
