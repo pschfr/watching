@@ -8,5 +8,8 @@ gem 'haml'
 # DSL for quickly creating web apps
 gem 'sinatra'
 
+# Common extensions for Sinatra
+gem 'sinatra-contrib'
+
 # Fast and simple web server
 gem 'thin'

@@ -1,9 +1,13 @@
 !!!
 %head
-  %title Watching Test
+  %title= settings.title
+  %meta{:author => settings.author}
   %meta{:charset => "utf-8"}
 %body
   %header
-    %h1 Watching Test
-  #main{:role => "main"}
+    %h1= settings.title
+  %main{:role => "main"}
     = yield
+  %footer
+    %p
+      %a{:href => settings.github, :target => "_blank"} View Source on GitHub.
