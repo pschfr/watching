@@ -4,6 +4,8 @@
     %title= settings.title
     %meta{:author => settings.author}
     %meta{:charset => "utf-8"}
+    %link{:rel => "stylesheet", :href => "assets/app.css"}
+    %script{:src => "assets/app.js"}
   %body
     = haml :_header
     = yield

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 source 'https://rubygems.org'
 
 # Beautiful template engine
@@ -18,3 +16,8 @@ gem 'sinatra-contrib'
 
 # Fast and simple web server
 gem 'thin'
+
+gem 'sprockets'
+
+gem 'coffee-script'
+gem 'sass'
