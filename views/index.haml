@@ -1,1 +1,3 @@
-%p= "Hello world, it's #{Time.now} at the server!"
+%ul
+  - @movies.each do |movie|
+    %li #{movie[0]}
