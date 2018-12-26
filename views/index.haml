@@ -1,4 +1,4 @@
-%ul
+%ul#movies
   - @movies.each do |movie|
     %li
       %a{:href => "/search?movie=#{movie[0]}"} #{movie[0]}
