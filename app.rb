@@ -6,6 +6,10 @@ Bundler.require
 
 # Load configuration from file
 config_file 'data/config.yml'
+config_file 'data/secret.yml'
+
+# Authenticate with TMDb API
+TMDb.api_key = settings.tmdb_key
 
 # On '/' page, do this...
 get '/' do
@@ -17,4 +21,15 @@ get '/' do
 
   # Render views/index.haml
   haml :index
+end
+
+get '/search' do
+  # Get movie title from query parameters
+  query = params['movie']
+
+  # Return result to page
+  @result = TMDb::Movie.search(query).first
+
+  # Render views/result.haml
+  haml :result
 end

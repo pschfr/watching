@@ -17,6 +17,8 @@ gem 'sinatra-contrib'
 # Fast and simple web server
 gem 'thin'
 
+gem 'tmdb-api'
+
 gem 'sprockets'
 
 gem 'coffee-script'
