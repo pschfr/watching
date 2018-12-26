@@ -1,4 +1,6 @@
 %ul#movies
   - @movies.each do |movie|
     %li
-      %a{:href => "/search?movie=#{movie[0]}"} #{movie[0]}
+      %a{:href => "/search?movie=#{movie[0]}"}
+        %img{:src => "https://via.placeholder.com/500x750"}
+        %span= movie[0]

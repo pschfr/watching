@@ -22,3 +22,7 @@ gem 'tmdb-api'
 gem 'sprockets'
 
 gem 'sass'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-normalize-scss'
+end

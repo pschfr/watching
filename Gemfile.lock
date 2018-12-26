@@ -1,5 +1,6 @@
 GEM
   remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     activesupport (5.2.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
@@ -31,6 +32,7 @@ GEM
     rack (2.0.6)
     rack-protection (2.0.5)
       rack
+    rails-assets-normalize-scss (3.0.3)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
@@ -75,6 +77,7 @@ PLATFORMS
 
 DEPENDENCIES
   haml
+  rails-assets-normalize-scss!
   rerun
   sass
   sinatra
