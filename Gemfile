@@ -21,9 +21,4 @@ gem 'tmdb-api'
 
 gem 'sprockets'
 
-gem 'coffee-script'
 gem 'sass'
-
-source 'https://rails-assets.org' do
-  gem 'rails-assets-bootstrap'
-end
