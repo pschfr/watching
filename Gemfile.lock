@@ -32,6 +32,7 @@ GEM
     rack (2.0.6)
     rack-protection (2.0.5)
       rack
+    rails-assets-echojs (1.7.3)
     rails-assets-normalize-scss (3.0.3)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
@@ -77,6 +78,7 @@ PLATFORMS
 
 DEPENDENCIES
   haml
+  rails-assets-echojs!
   rails-assets-normalize-scss!
   rerun
   sass
