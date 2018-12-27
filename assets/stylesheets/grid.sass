@@ -3,8 +3,23 @@ ul#movies
 	grid-template-columns: repeat(5, 1fr [col])
 	margin: 0
 	padding: 0
+	li
+		list-style: none
+		img
+			width: 100%
+		&[watched]
+			position: relative
+			&:after
+				content: 'watched'
+				display: inline-block
+				position: absolute
+				bottom: 10px
+				right: 10px
+				text-transform: uppercase
+				font-size: 14px
+				font-weight: bold
+				background-color: transparentize(black, 0.5)
+				border-radius: 3px
+				padding: 3px
+				opacity: 0.75
 
-li
-	list-style: none
-	img
-		width: 100%

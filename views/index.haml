@@ -1,5 +1,5 @@
 %ul#movies
   - @movies.each_with_index do |movie, index|
-    %li
+    %li{:watched => movie[1]}
       %a{:href => "/search?movie=#{movie[0].parameterize}", :title => movie[0]}
         %img{:src => @posters[index].flatten[1], :alt => movie[0]}
