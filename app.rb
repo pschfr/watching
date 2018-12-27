@@ -6,7 +6,6 @@ Bundler.require
 
 # Load configuration from file
 config_file 'data/config.yml'
-config_file 'data/secret.yml'
 
 # Constants
 IMAGE_PATH    = 'https://image.tmdb.org/t/p/w500'
