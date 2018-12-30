@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Require items from Bundler
 require 'bundler'
 Bundler.require
@@ -8,9 +6,9 @@ Bundler.require
 config_file 'data/config.yml'
 
 # Constants
-IMAGE_PATH    = 'https://image.tmdb.org/t/p/w500'
-MOVIE_PATH    = 'data/movies.json'
-POSTER_PATH   = 'data/posters.json'
+IMAGE_PATH    = 'https://image.tmdb.org/t/p/w500'.freeze
+MOVIE_PATH    = 'data/movies.json'.freeze
+POSTER_PATH   = 'data/posters.json'.freeze
 
 # Authenticate with TMDb API
 TMDb.api_key = settings.tmdb_key
