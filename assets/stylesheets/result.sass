@@ -1,0 +1,14 @@
+#backdrop
+	background: no-repeat center/cover fixed
+	z-index: -1
+	&:after
+		content: ''
+		background-color: rgba(0, 0, 0, 0.67)
+
+#backdrop, #backdrop:after
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+

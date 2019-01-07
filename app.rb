@@ -6,7 +6,7 @@ Bundler.require
 config_file 'data/config.yml'
 
 # Constants
-IMAGE_PATH    = 'https://image.tmdb.org/t/p/w500'.freeze
+IMAGE_PATH    = 'https://image.tmdb.org/t/p/'.freeze
 MOVIE_PATH    = 'data/movies.json'.freeze
 POSTER_PATH   = 'data/posters.json'.freeze
 
@@ -39,7 +39,7 @@ get ['/search', '/add'] do
   # If on '/add', actually add the poster path to the JSON file
   if request.path_info == '/add'
     # Builds temporary hashes for storing the images
-    poster_hash   = { @result.title => "#{IMAGE_PATH}#{@result.poster_path}" }
+    poster_hash   = { @result.title => "#{IMAGE_PATH}w500#{@result.poster_path}" }
 
     # Opens JSON file for reading
     poster_json   = JSON[File.read(POSTER_PATH)]
