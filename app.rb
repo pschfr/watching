@@ -15,13 +15,26 @@ TMDb.api_key = settings.tmdb_key
 
 # On '/' page, do this...
 get '/' do
+  # Get sorting order from query parameters
+  sort = params['sort']
+
   # Open movie file, and return JSON to the page
   File.open(MOVIE_PATH) do |f|
-    @movies = JSON.parse(f.read).sort_by { |e| e[0].to_s }
+    @movies = JSON.parse(f.read)
   end
   # Open poster file, and return JSON to the page
   File.open(POSTER_PATH) do |f|
-    @posters = JSON.parse(f.read).sort_by { |e| e.keys[0].to_s }
+    @posters = JSON.parse(f.read)
+  end
+
+  # If 'asc' or not there, sort alphabetically
+  if sort == 'asc' or sort == nil
+    @movies  = @movies.sort_by  { |e| e[0].to_s }
+    @posters = @posters.sort_by { |e| e.keys[0].to_s }
+  # Or sort it backwards
+  elsif sort == 'desc'
+    @movies  = @movies.sort_by  { |e| e[0].to_s }.reverse
+    @posters = @posters.sort_by { |e| e.keys[0].to_s }.reverse
   end
 
   # Render views/index.haml
