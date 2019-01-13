@@ -1,6 +1,6 @@
 # [Watching](https://watching-pschfr.herokuapp.com)
 
-This is a [Sinatra](http://sinatrarb.com) app that will end up being a movie and TV show watchlist!
+This is a [Sinatra](http://sinatrarb.com) app that is a movie watchlist using the [tmdb-api](https://github.com/andrielfn/tmdb-api) gem.
 
 ## Running
 1. Clone the repo. `git clone https://github.com/pschfr/watching`, then `cd watching`.
