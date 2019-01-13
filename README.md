@@ -1,4 +1,4 @@
-# Watching
+# [Watching](https://watching-pschfr.herokuapp.com)
 
 This is a [Sinatra](http://sinatrarb.com) app that will end up being a movie and TV show watchlist!
 
