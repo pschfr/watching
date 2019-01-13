@@ -6,9 +6,9 @@ Bundler.require
 config_file 'data/config.yml'
 
 # Constants
-IMAGE_PATH    = 'https://image.tmdb.org/t/p/'.freeze
-MOVIE_PATH    = 'data/movies.json'.freeze
-POSTER_PATH   = 'data/posters.json'.freeze
+IMAGE_PATH  = 'https://image.tmdb.org/t/p/'.freeze
+MOVIE_PATH  = 'data/movies.json'.freeze
+POSTER_PATH = 'data/posters.json'.freeze
 
 # Authenticate with TMDb API
 TMDb.api_key = settings.tmdb_key
@@ -27,8 +27,8 @@ get '/' do
     @posters = JSON.parse(f.read)
   end
 
-  # If 'asc' or not there, sort alphabetically
-  if sort == 'asc' or sort == nil
+  # If 'asc', sort alphabetically
+  if sort == 'asc'
     @movies  = @movies.sort_by  { |e| e[0].to_s }
     @posters = @posters.sort_by { |e| e.keys[0].to_s }
   # Or sort it backwards
@@ -52,11 +52,11 @@ get ['/search', '/add'] do
   # If on '/add', actually add the poster path to the JSON file
   if request.path_info == '/add'
     # Builds temporary hashes for storing the images
-    poster_hash   = { @result.title => "#{IMAGE_PATH}w500#{@result.poster_path}" }
+    poster_hash = { @result.title => "#{IMAGE_PATH}w500#{@result.poster_path}" }
 
     # Opens JSON file for reading
-    poster_json   = JSON[File.read(POSTER_PATH)]
-    poster_json   = [poster_json] if poster_json.class != Array
+    poster_json = JSON[File.read(POSTER_PATH)]
+    poster_json = [poster_json] if poster_json.class != Array
 
     # Append hash to JSON file
     File.open(POSTER_PATH, 'w') do |f|
