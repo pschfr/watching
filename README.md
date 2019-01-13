@@ -1,5 +1,7 @@
 # [Watching](https://watching-pschfr.herokuapp.com)
 
+![Screenshot of Watching](screenshot.png)
+
 This is a [Sinatra](http://sinatrarb.com) app that is a movie watchlist using the [tmdb-api](https://github.com/andrielfn/tmdb-api) gem.
 
 ## Running
