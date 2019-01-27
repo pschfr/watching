@@ -14,9 +14,6 @@ gem 'sinatra'
 # Common extensions for Sinatra
 gem 'sinatra-contrib'
 
-# Fast and simple web server
-gem 'thin'
-
 # Actual API connecting to The Movie Database
 gem 'tmdb-api'
 
