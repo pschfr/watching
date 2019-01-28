@@ -37,8 +37,8 @@ get '/' do
     @posters = @posters.sort_by { |e| e.keys[0].to_s }.reverse
   end
 
-  # Render views/index.haml
-  haml :index
+  # Render views/index.erb
+  erb :index
 end
 
 # On '/search?movie=title' or '/add?movie=title', do this...
@@ -64,6 +64,6 @@ get ['/search', '/add'] do
     end
   end
 
-  # Render views/result.haml
-  haml :result
+  # Render views/result.erb
+  erb :result
 end

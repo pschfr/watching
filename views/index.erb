@@ -1,0 +1,9 @@
+<ul id="movies">
+	<% @movies.each_with_index do |movie, index| %>
+		<li watched="<%= movie[1] %>">
+			<a href="/search?movie=<%= movie[0].parameterize %>" title="<%= movie[0] %>">
+				<img src="https://via.placeholder.com/500x750/000/FFF?text=Loading" data-echo="<%= @posters[index].flatten[1] %>" alt="<%= movie[0] %>">
+			</a>
+		</li>
+	<% end %>
+</ul>

@@ -1,0 +1,16 @@
+<header>
+	<h1>
+	    <%= settings.title %>
+    	<% # If on index page, show the sort dropdown. %>
+    	<% if request.path_info == '/' %>
+			<label for="sort">
+        		Sort:
+				<select name="sort" id="sort">
+					<option value=''>Default</option>
+					<option value='asc'>Ascending</option>
+					<option value='desc'>Descending</option>
+				</select>
+			</label>
+		<% end %>
+	</h1>
+</header>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title><%= settings.title %></title>
+    	<meta author="<%= settings.author %>">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="assets/app.css">
+		<script src="assets/app.js"></script>
+	</head>
+  	<body>
+    	<%= erb :_header %>
+		<%= yield %>
+		<%= erb :_footer %>
+	</body>
+</html>

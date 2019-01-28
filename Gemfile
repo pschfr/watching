@@ -1,8 +1,5 @@
 source 'https://rubygems.org'
 
-# Beautiful template engine
-gem 'haml'
-
 # Restarts the app on changes
 group :development, :test do
   gem 'rerun'
